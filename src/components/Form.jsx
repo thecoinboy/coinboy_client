@@ -18,8 +18,6 @@ const Form = () => {
         const {name, value} = e.target
         setData({...data, [name]:value });
     }
-
-
     const handleSubmit = async(e) =>{
         e.preventDefault();
         const {name, email, message, subject} = data;
@@ -28,7 +26,7 @@ const Form = () => {
             if(!name || !email || !message){
                 toast("please fill required field")
             }else{
-              const sendData =  await axios.post("/api/v1/contact", {name, email, subject, message})
+              const sendData =  await axios.post("https://coinboy-server.onrender.com/api/v1/contact", {name, email, subject, message})
               console.log(sendData)
             }
         } catch (error){
