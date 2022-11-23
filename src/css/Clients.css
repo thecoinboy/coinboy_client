@@ -1,0 +1,66 @@
+.client{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 4rem;
+    width: 100%;
+}
+.cli_container{
+    width: 90%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    text-align: center;
+    overflow: hidden;
+}
+.client h1{ 
+    color: #fff;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-top: 3rem;
+}
+.cli_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 18rem;
+    height: 20rem;
+    margin-top:4rem;
+    margin-bottom: 4rem;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.cli_box img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+}
+.cli_detail{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.cli_detail>:nth-child(1) {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Poppins" sans-serif;
+}
+.cli_detail>:nth-child(2) {
+    font-family: "Poppins" sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 300;
+}
+
+
+@media screen and (max-width:767px) {
+    .cli_container{
+        width: 100%;
+    }
+    
+}

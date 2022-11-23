@@ -1,0 +1,105 @@
+.form_contaienr{
+    margin-top: 6rem;
+    padding-top: 6rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+.form_r {
+    width: 40rem;
+    padding-bottom: 4rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+.form_r img{
+    width: 7rem;
+    height: auto;
+    top: -14%;
+    position: absolute;
+    left: 44%;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem 2rem 0rem;
+    width: 100%;
+    height: auto;
+}
+.form_control{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 1rem;
+
+}
+.form_contaienr h2{
+    font-size: 2rem;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.inpu{
+    padding: 10px;
+    color: white;
+    width: 30rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow:-1px 5px 10px -4px var(--text);
+}
+.f_button{
+    width: 10rem;
+    padding: 8px 15px 8px 15px;
+    margin-top: 1.5rem;
+    align-self: center;
+}
+.muted{
+    color:var(--black);
+    font-size:12px;
+    margin: 0;
+    margin-top: -10px;
+    padding: 0;
+    color: var(--text);
+    text-transform: lowercase;
+}
+
+@media screen and (max-width:850px) {
+    .form_contaienr{
+        height: auto;
+    }
+}
+@media screen and (max-width: 767px) {
+    .form_r{
+        margin-top: 5rem;
+        padding-top: 2rem;
+        width: 19rem;
+    }
+    .inpu{
+        width: 14rem;
+        margin-top: 1rem;
+    }
+    .form_r img{
+        left: 32%;
+    }
+    .form_contaienr{
+        margin-top: 1rem;
+        height: auto;
+    }
+    .f_button{
+        margin-top: 2.7rem;
+    }
+    form{
+        padding: 0;
+    }
+}

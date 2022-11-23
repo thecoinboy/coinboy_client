@@ -1,0 +1,97 @@
+.service{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.ser_container{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    height: auto;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+
+}
+.service_title{
+    display: flex;
+    flex-direction: column;
+}
+.service_title>:nth-child(1){
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    font-family: "Lora", serif;
+}
+.service_title>:nth-child(2){
+    text-transform: capitalize;
+    font-family: "Lora", serif;
+    font-size: 14px;
+    font-family: "Poppins" sans-serif;
+    font-weight: 400;
+    border-top: 2px solid var(--white);
+    color: var(--text);
+    align-self: flex-end;
+    padding-top: 7px;
+}
+
+/* box**************** */
+
+.service_contain{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+.ser_box{
+    width: 15rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 1rem;
+    box-shadow:4px 12px 20px -4px var(--text);
+    overflow: hidden;
+    color :var(--text);
+}
+
+.ser_box>:nth-child(1){
+    font-size: 2.5rem;
+    color: var(--text);
+}
+.ser_box>:nth-child(2){
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #fff;
+}
+.ser_box>:nth-child(3){
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: lowercase;
+    color: var(--white);
+}
+
+.ser_button{
+    width: 8rem;
+    height: 2rem;
+    font-size: 12px;
+}
+
+
+@media screen and (max-width:767px){
+    .ser_container{
+        width: 20rem;
+    }
+}
+

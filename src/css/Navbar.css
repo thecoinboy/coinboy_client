@@ -1,0 +1,115 @@
+.nav{
+    display: flex;
+    padding: 1rem 4rem 1rem 4rem;
+    align-items: center;
+    position: relative;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 7;
+}
+.logo{
+    flex: 30%;
+}
+.logo small{
+    font-size: 13px;
+}
+.logo a{
+    font-size: 1.3rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition:ease-in-out .3s;
+    color: #0af028;
+}
+
+.list{
+    flex: 70%;
+}
+.list ul{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+    z-index: 99;
+}
+.list ul a{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 6  00;
+    cursor: pointer;
+    color: white;
+}
+
+.list ul li{
+    position: relative;
+    padding: 4px 15px 4px 15px;
+    z-index: 1;
+    height: auto;
+}
+.list ul li::after{
+    content: '';
+    top: 0%;
+    left: 0%;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    align-self: center;
+    z-index: -1;
+    transition: ease-in-out .3s;
+}
+.list ul li:hover::after{
+    box-shadow:-1px 5px 10px -1px var(--text);
+}
+
+.toggler{
+    display: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor:pointer;
+}
+
+@media screen and (max-width:767px ) {
+    .logo{
+        flex: 70%;
+    }
+    .nav{
+        padding: 1.5rem;
+    }
+    .list ul{      
+        top: 100%;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        width: 100%;
+        height: 80vh;
+        backdrop-filter: blur(15px);
+        background-color: #091921;
+        transition: .3s all;
+    }
+    .toggler{
+        display: block;
+    }
+    .list ul li{
+        padding: 5px 50px 5px 50px;
+    }
+
+    .toggle{
+        left: -100% !important;
+    }
+    .list{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
