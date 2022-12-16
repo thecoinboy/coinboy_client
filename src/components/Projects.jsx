@@ -12,6 +12,14 @@ const prodata = [
         "url": "https://shortassignment.netlify.app/",
         "title": "short assignment",
     },
+    {
+        "url": "https://burgerwalaui.onrender.com/",
+        "title": "burgerwala ecommerce",
+    },
+    {
+        "url": "https://nextshine.onrender.com/",
+        "title": "nextshine agency",
+    }
     
 ]
 
