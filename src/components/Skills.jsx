@@ -26,7 +26,7 @@ const Skills = () => {
                     <li> Api's and data handling - fetch api and axios for data handling and manage api's </li>,
                     <li> Importent library - React-toastify, swiperslider, dotenv, react-icons, </li>,
                     <li> Advance topics - routing, api, reduxjs/toolkit,</li>,
-                    <li> learning more </li>,
+                    
 
 
                 ],
@@ -36,9 +36,11 @@ const Skills = () => {
             title: "Javascript",
             details:
                 [
-                    <li> datatypes, oprators, arrays(mapping, reducing, filtring), objects, forloops, api, promises, classes  </li>,
-                    <li> form validation, toggle,  </li>,
-                    <li> learning more </li>,
+                    <li> datatypes, oprators, array, objects, for of loop, for in loop, forEach loop, api, promises</li>,
+                    <li> form validation, NaN, if else, ternary oprator, for loop, use of this keyword </li>,
+                    <li> const, let, fat arrow fuction, template litrals, splice, map, </li>,
+                    <li> string, slice, concat, escape charactor, math mathod(floor, random, min, max),  </li>,
+                    <li> setTimeout, setInterval, spred oprator </li>,
 
                 ],
         },
@@ -50,7 +52,6 @@ const Skills = () => {
                     <li> Working with breakpoits, theame customization </li>,
                     <li> classes for styling </li>,
                     <li> learning more </li>,
-
                 ],
         },
         {
@@ -68,7 +69,7 @@ const Skills = () => {
             title: "other",
             details:
                 [
-                    <li> git, github, </li>,
+                    <li> git, github </li>,
                     <li>knowladge of hosting, domain parking, </li>,
                     <li> knowladge of blockchain, metamsk, web3.0, metaverse, nft, token</li>,
                     <li> knowladge of linux, window,</li>,
