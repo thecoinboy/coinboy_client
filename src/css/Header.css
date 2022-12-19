@@ -22,6 +22,7 @@
     width: 7rem;
     height: 2.8em;
     font-size: 13px;
+    cursor: pointer;
 }
 .btn_hero a{
     text-decoration: none;

@@ -3,12 +3,11 @@ import { FaLinkedinIn, FaFacebookF, FaTwitter, FaGithub } from 'react-icons/fa'
 import Yourpic from '../image/boy.png'
 import ReactTypingEffect from 'react-typing-effect';
 import '../css/Header.css'
-import resume from '../resume.docx'
+import resume from '../new.docx'
 import { motion } from 'framer-motion'
 import {Link} from 'react-router-dom'
 
 const Header = () => {
-
   return (
     <header className='header'>
       <div className="hero">
