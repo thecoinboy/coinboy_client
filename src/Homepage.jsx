@@ -11,7 +11,6 @@ import { Projects } from './components/Projects.jsx'
 import Skills from './components/Skills'
 
 const Homepage = () => {
-
   return (
     <div>
       <Navbar />

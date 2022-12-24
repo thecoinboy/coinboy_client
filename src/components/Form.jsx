@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 const Form = () => {
+    const [loading, setLoading] = useState(false)
     const [data, setData] = useState({
         name: "",
         email: "",
@@ -14,25 +15,28 @@ const Form = () => {
         message: "",
     });
 
-    const handleChange = (e) =>{
-        const {name, value} = e.target
-        setData({...data, [name]:value });
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setData({ ...data, [name]: value });
     }
-    const handleSubmit = async(e) =>{
-        e.preventDefault();
-        const {name, email, message, subject} = data;
 
-        try {
-            if(!name || !email || !message){
-                toast("please fill required field")
-            }else{
-              const sendData =  await axios.post("https://coinboy-server.onrender.com/api/v1/contact", {name, email, subject, message})
-              console.log(sendData)
-            }
-        } catch (error){
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const { name, email, message, subject } = data;
+        if (!name || !email || !message) {
+            toast("please fill required field")
+        } else {
+            setLoading(true)
+            await axios.post("https://port-server.onrender.com/api/v1/contact", { name, email, subject, message }).then((res)=>{
+                setLoading(false)
+                toast(res.data.message)
+                setData({...data, name:"", email:"", subject:"", message:""})
+            }).catch((err)=>{
+                setLoading(true)
+            })
         }
     }
-    
+
     return (
         <div className="form_contaienr" id='contact'>
             <div>
@@ -47,10 +51,11 @@ const Form = () => {
                         <div className="form_control">
                             <ToastContainer />
                             <h2>  <span style={{ color: "var(--text)" }}> Get </span>   in  touch </h2>
+                            { loading ? <div style={{color:'white', textAlign:'center', marginBottom:"10px", fontSize:"25px" }}> Loading... </div> : '' }
                             <input placeholder='*Full name' value={data.name} name="name" className='inpu' onChange={handleChange} />
-                            <input  type="email" placeholder='*E-mail' value={data.email} name='email' className='inpu' onChange={handleChange} />
+                            <input type="email" placeholder='*E-mail' value={data.email} name='email' className='inpu' onChange={handleChange} />
                             <input type="text" placeholder='Subject' name='subject' value={data.subject} className='inpu' onChange={handleChange} />
-                            <textarea  name="message" className='inpu' onChange={handleChange} value={data.message} cols="30" rows="3" placeholder='*Message' />
+                            <textarea name="message" className='inpu' onChange={handleChange} value={data.message} cols="30" rows="3" placeholder='*Message' />
                             <input type="submit" className='button f_button' />
                         </div>
                     </form>

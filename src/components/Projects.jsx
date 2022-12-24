@@ -1,26 +1,27 @@
 import React from 'react'
 import '../css/Projects.css'
-// import image1 from '../image/developer.jpg'
+import image1 from '../image/developer.jpg'
 import { motion } from 'framer-motion'
+import burgerwala from '../image/burger.jpg'
+import tea from '../image/tea.jpg'
+import nextshine from '../image/nextshine.jpg'
 
 const prodata = [
     {
         "url":"https://mbateaclone.netlify.app/",
-        "title": "Mbachiawala"
-    },
-    {
-        "url": "https://shortassignment.netlify.app/",
-        "title": "short assignment",
+        "title": "Mbachiawala",
+        "pic":tea
     },
     {
         "url": "https://burgerwalaui.onrender.com/",
         "title": "burgerwala ecommerce",
+        "pic":burgerwala
     },
     {
         "url": "https://nextshine.onrender.com/",
         "title": "nextshine agency",
+        "pic":nextshine
     }
-    
 ]
 
 export const Projects = () => {
@@ -43,7 +44,7 @@ export const Projects = () => {
                                     className="box_pro" key={index}>
                                     <a href={data.url} target='_black'>
                                     <span className='titles'> {data.title}</span> </a>
-                                    <iframe title={data.title} src={data.url}></iframe>
+                                    <img src={data.pic}  />
                                 </motion.div>
                             )
                         })

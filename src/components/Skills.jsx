@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/Skills.css'
-import {motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 const Skills = () => {
@@ -26,7 +26,7 @@ const Skills = () => {
                     <li> Api's and data handling - fetch api and axios for data handling and manage api's </li>,
                     <li> Importent library - React-toastify, swiperslider, dotenv, react-icons, </li>,
                     <li> Advance topics - routing, api, reduxjs/toolkit,</li>,
-                    
+
 
 
                 ],
@@ -83,18 +83,19 @@ const Skills = () => {
 
         <div className="skills" id='skills'>
             <motion.h1
-                initial={{x:-150, opacity:0}}
-                whileInView={{x: 0, opacity:1}}
+                initial={{ x: -150, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
             > My Skills </motion.h1>
             <div className="contain">
                 {
                     skills.map((data, i) => {
                         return (
                             <motion.div
-                                initial={{scale: 0, opacity: 0 }}
-                                whileInView={{ scale:1, opacity: 1 }}
+                                key={i}
+                                initial={{ scale: 0, opacity: 0 }}
+                                whileInView={{ scale: 1, opacity: 1 }}
                                 transition={{ delay: 0.3 }}
-                                className='containterSkills' key={i}>
+                                className='containterSkills'>
                                 <motion.h1
                                     initial={{ x: 200, opacity: 0 }}
                                     whileInView={{ x: 0, opacity: 1 }}
